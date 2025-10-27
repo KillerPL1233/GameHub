@@ -26,20 +26,20 @@ użytkownikami
 
 User stories — przykłady i kryteria akceptacji 
 - Jako niezalogowany użytkownik chcę przeglądać listę gier, żeby zobaczyć co jest w 
-serwisie. 
+serwisie.<br> 
 AC: widzę stronę listy z tytułem, miniaturą, średnią oceną i gatunkami; mogę filtrować i 
 sortować. 
 
-- Jako użytkownik zarejestrowany chcę dodać grę do mojej prywatnej listy „Do ogrania”. 
+- Jako użytkownik zarejestrowany chcę dodać grę do mojej prywatnej listy „Do ogrania”. <br>
 AC: gra pojawia się na mojej liście, widzę ją w profilu; inne osoby nie widzą moich 
 prywatnych list. 
 
-- Jako użytkownik chcę ocenić grę (1–5) i dodać komentarz. 
+- Jako użytkownik chcę ocenić grę (1–5) i dodać komentarz.<br> 
 AC: ocena wpływa na średnią; komentarz pojawia się pod grą w czasie rzeczywistym 
 (lub po odświeżeniu). 
 
-- Jako administrator chcę dodać nową grę do katalogu. 
+- Jako administrator chcę dodać nową grę do katalogu. <br>
 AC: nowa gra jest widoczna w katalogu; wszystkie wymagane pola walidowane. 
 
-- Jako użytkownik chcę zobaczyć ranking „Top 10 popularnych gier”. 
+- Jako użytkownik chcę zobaczyć ranking „Top 10 popularnych gier”.<br> 
 AC: lista aktualizuje się na podstawie aktywności (oceny/komentarze/listy/wyświetlenia).
