@@ -1,12 +1,16 @@
 const express = require('express');
 const app = express();
-const usersRouter = require('./routes/users');
+const gamesRouter = require('./routes/games');
+const cors = require('cors');
 
 // middleware
 app.use(express.json()); // parsowanie JSON w body
 
+// usługa cors
+app.use(cors()); 
+
 // routing
-app.use('/api/users', usersRouter);
+app.use('/api/games', gamesRouter);
 
 // prosty root
 app.get('/', (req, res) => {
@@ -23,3 +27,5 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
+
+
