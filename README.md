@@ -3,11 +3,11 @@
 #####   1   #####
 
 GameHub to prosty portal katalogujący gry  który umożliwi:  
- przeglądanie bazy gier, tworzenie prywatnych list użytkownika (np. posiadane, 
+- przeglądanie bazy gier, tworzenie prywatnych list użytkownika (np. posiadane, 
 ukończone, do ogrania), 
- ocenianie i komentowanie gier, 
- automatyczne rankingi (popularność/ocena), 
- podstawowa administracja (dodawanie/edycja wpisów przez admina). 
+- ocenianie i komentowanie gier, 
+- automatyczne rankingi (popularność/ocena), 
+- podstawowa administracja (dodawanie/edycja wpisów przez admina). 
 
 
 Wymagania funkcjonalne: 
