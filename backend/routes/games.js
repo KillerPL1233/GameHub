@@ -28,5 +28,19 @@ router.get('/:id', (req, res) => {
   res.json(user);
 });
 
+// POST /api/users -> dodanie
+router.post('/', (req, res) => {
+    const users = readUsers();
+
+    const newUser = {
+        id: users.length ? Math.max(...users.map(u => u.id)) + 1 : 1,
+        title: req.body.title
+    };
+
+    users.push(newUser);
+    writeUsers(users);
+
+    res.status(201).json(newUser);
+});
 
 module.exports = router;
