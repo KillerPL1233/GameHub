@@ -28,18 +28,5 @@ router.get('/:id', (req, res) => {
   res.json(user);
 });
 
-// POST /api/users -> dodaj użytkownika
-router.post('/', (req, res) => {
-  const { name, email } = req.body;
-  if (!name || !email) {
-    return res.status(400).json({ error: 'name and email are required' });
-  }
-  const users = readUsers();
-  const nextId = users.length ? Math.max(...users.map(u => u.id)) + 1 : 1;
-  const newUser = { id: nextId, name, email };
-  users.push(newUser);
-  writeUsers(users);
-  res.status(201).json(newUser);
-});
 
 module.exports = router;
