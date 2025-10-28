@@ -13,7 +13,7 @@ ukończone, do ogrania),
 Wymagania funkcjonalne: 
 - Rejestracja / logowanie (email + hasło, JWT) 
 - Strona główna / katalog gier — lista z paginacją, sortowaniem, filtrowaniem 
-(gatunek, platforma, rok) 
+(gatunek, platforma, rok) git 
 - Kartka gry— opis, obrazek, gatunki, linki, średnia ocena, liczba ocen, komentarze 
 - Prywatne listy użytkownika — tworzenie nazwanej listy + dodawanie/usuń gier 
 (np. „Posiadane”, „Do ogrania”) 
