@@ -1,25 +1,23 @@
+// backend/app.js
 const express = require('express');
+const { testConnection } = require('./data/database/db_connect');
+require('dotenv').config();
+
 const app = express();
-const usersRouter = require('./routes/users');
+app.use(express.json());
 
-// middleware
-app.use(express.json()); // parsowanie JSON w body
-
-// routing
+// import routów
+const usersRouter = require('./routes/scripts');
 app.use('/api/users', usersRouter);
 
-// prosty root
-app.get('/', (req, res) => {
-  res.send({ status: 'OK', message: 'API działa' });
-});
+// health check
+app.get('/', (req, res) => res.send('API działa!'));
 
-// błąd 404
-app.use((req, res) => {
-  res.status(404).json({ error: 'Not Found' });
-});
-
-// uruchomienie
+// start servera + test DB
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT}`);
-});
+(async () => {
+  await testConnection(); // sprawdź połączenie podczas startu
+  app.listen(PORT, () => {
+    console.log(`Serwer działa na porcie ${PORT}`);
+  });
+})();
